@@ -46,12 +46,9 @@ function Categories({ selectedCategory, onCategoryClick }) {
             <span className='navbar-toggler-icon'></span>
           </button>
           <div className='navbar-collapse collapse' id='navbarSupportedContent'>
-            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+            <ul className='navbar-nav d-flex me-auto mb-2 mb-lg-0 align-items-center'>
               {categories.map((category, index) => (
-                <li
-                  className='nav-item mx-2 m-2 align-items-center'
-                  key={index}
-                >
+                <li className='nav-item mx-2 m-2' key={index}>
                   <button
                     type='button'
                     onClick={() => handleCategoryClick(category)}
