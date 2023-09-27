@@ -27,7 +27,7 @@ function ProductsList({ selectedCategory }) {
       <br />
       <div className='row align-content-center'>
         {productsList.map((product) => (
-          <div key={product.id} className='col-12 col-md-6 col-lg-4 mb-4'>
+          <div key={product.id} className='col-12 col-md-6 col-lg-3 mb-4'>
             <div className='card h-100'>
               <div className='card-body d-flex align-items-center justify-content-center'>
                 <img
