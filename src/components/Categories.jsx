@@ -66,9 +66,7 @@ function Categories({ selectedCategory, onCategoryClick }) {
                 placeholder='Search'
                 aria-label='Search'
               ></input>
-              <button className='btn btn-outline-secondary' type='submit'>
-                Search
-              </button>
+              <button className='btn btn-outline-secondary'>Search</button>
             </form>
           </div>
         </div>
