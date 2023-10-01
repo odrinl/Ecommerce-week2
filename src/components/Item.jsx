@@ -22,6 +22,7 @@ function Item({ item, setItem }) {
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching categories:', error);
+
         setIsLoading(false);
       }
     })();
