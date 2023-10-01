@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+Item.propTypes = {
+  item: PropTypes.any.isRequired,
+  setItem: PropTypes.func.isRequired,
+};
 
 function Item({ item, setItem }) {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+ProductsList.propTypes = {
+  selectedCategory: PropTypes.string.isRequired,
+  onItemClick: PropTypes.func.isRequired,
+};
 
 function ProductsList({ selectedCategory, onItemClick }) {
   const [productsList, setProductsList] = useState([]);

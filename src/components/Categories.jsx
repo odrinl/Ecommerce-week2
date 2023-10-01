@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+Categories.propTypes = {
+  selectedCategory: PropTypes.string.isRequired,
+  onCategoryClick: PropTypes.func.isRequired,
+};
 
 function Categories({ selectedCategory, onCategoryClick }) {
   const [categories, setCategories] = useState([]);
 
-  let apiUrl = 'https://fakestoreapi.com/products/categories';
-
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(
+          'https://fakestoreapi.com/products/categories'
+        );
         const data = await response.json();
         data.unshift('all products');
         setCategories(data);

@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import ErrorMassage from './components/ErrorMessage';
 import Categories from './components/Categories';
 const ProductsList = lazy(() => import('./components/ProductsList'));
@@ -9,13 +9,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [item, setItem] = useState(null);
-
-  const onItemClick = (selectedItem) => {
-    setItem(selectedItem);
-  };
-  const onCategoryClick = (category) => {
-    setSelectedCategory(category);
-  };
 
   return (
     <BrowserRouter>
